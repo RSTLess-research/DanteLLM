@@ -1,6 +1,6 @@
 # DanteLLM: Let's Push Italian LLM Research Forward! 🤌🇮🇹
 ## News
-* 02/03: Our paper has been [featured at Wired (Italy)](https://www.wired.it/article/large-language-model-italiano-dante/).
+* 02/03: Our paper has been [featured in Wired (Italy)](https://www.wired.it/article/large-language-model-italiano-dante/).
 * 19/02: DanteLLM and OpenDanteLLM paper has been accepted at COLING 2024. See you in Turin! 🤌🇮🇹
 
 ## Abstract
