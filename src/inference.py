@@ -1,9 +1,6 @@
-from peft import AutoPeftModelForCausalLM, PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-base_model = "mistralai/Mistral-7B-Instruct-v0.2"
-peft_model_id = "andreabac3/DanteLLM_instruct_7b-v0.2-boosted"
-
+base_model = "rstless-research/DanteLLM-7B-Instruct-Italian-v0.1"
 
 # Load tokenizer
 tokenizer = AutoTokenizer.from_pretrained(base_model)
@@ -14,11 +11,9 @@ tokenizer.padding_side = "right"
 model = AutoModelForCausalLM.from_pretrained(
     base_model, load_in_8bit=True, device_map="auto", attn_implementation="flash_attention_2",
 )
-# Load DanteLLMs LoRA weights
-model = PeftModel.from_pretrained(model, peft_model_id).eval()
 
 prompt = """
-<s>[INST] Rispondi alla domande in maniera concisa e precisa concludi ogni risposta con [END]
+<s>[INST] Rispondi alla domande in maniera concisa e precisa.
 Quanto dista la Luna dal pianeta Terra?
 [/INST]
 """
