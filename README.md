@@ -39,11 +39,12 @@ Coming soon!
 ```
 
 ## Authors
-- Andrea Bacciu (work done prior joining Amazon)
-- Cesare Campagnano
+- Andrea Bacciu* (work done prior joining Amazon)
+- Cesare Campagnano*
 - Giovanni Trappolini
 - Prof. Fabrizio Silvestri
 
+\* Equal contribution
 ### Cite our work
 ```bibtex
 Coming soon!
