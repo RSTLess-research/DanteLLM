@@ -9,8 +9,9 @@ In recent years, the dominance of Large Language Models (LLMs) in the English la
 ### Example usage
 
 ```python
-base_model = "mistralai/Mistral-7B-Instruct-v0.2"
-peft_model_id = "andreabac3/DanteLLM_instruct_7b-v0.2-boosted"
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+base_model = "rstless-research/DanteLLM-7B-Instruct-Italian-v0.1"
 
 # Load tokenizer
 tokenizer = AutoTokenizer.from_pretrained(base_model)
@@ -20,8 +21,6 @@ tokenizer.padding_side = "right"
 # Load model
 model = AutoModelForCausalLM.from_pretrained(
     base_model, load_in_8bit=True, device_map="auto")
-# Load DanteLLMs LoRA weights
-model = PeftModel.from_pretrained(model, peft_model_id).eval()
 
 prompt = """
 <s>[INST] Rispondi alla domande.
